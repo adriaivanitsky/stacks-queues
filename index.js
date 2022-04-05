@@ -18,3 +18,19 @@ class Stack {
     return this.#list.length;
   }
 }
+
+class Queue {
+  #list = [];
+
+  enqueue(item) {
+    this.#list.push(item);
+  }
+
+  dequeue() {
+    return this.#list.length ? this.#list.shift() : null;
+  }
+
+  hasNext() {
+    return !!this.#list.length;
+  }
+}
